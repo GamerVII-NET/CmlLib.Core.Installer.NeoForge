@@ -1,36 +1,26 @@
-# CmlLib.Core.Installer.Forge
+# CmlLib.Core.Installer.NeoForge
 
-## Minecraft Forge Installer
+## Minecraft NeoForge Installer
 <img src='https://raw.githubusercontent.com/CmlLib/CmlLib.Core/master/icon.png' width=128>
 
-Forge Installer for [CmlLib.Core](https://github.com/CmlLib/CmlLib.Core)
+NeoForge Installer for [CmlLib.Core](https://github.com/CmlLib/CmlLib.Core)
 
-## Features 
-* Forge Developer Support! After successfully installing the Forge version, the Forge advertising page will automatically open for you.
-* Automatic change of links to install Forge
-* Automatic installation of the Vanilla version of Minecraft before installing Forge
-* Skipping the Forge re-installation
+> **Note:** This is an unofficial library developed by [GamerVII](https://github.com/GamerVII-NET), who is not affiliated with [CmlLib](https://github.com/CmlLib).
 
-## Supported Forge Versions
+## Features
+* Automatic installation of Vanilla Minecraft before installing NeoForge
+* Automatic updating of links for NeoForge installation
+* Skipping NeoForge re-installation if it's already installed
+* Ability to retrieve available NeoForge versions
 
-**1.7.10 ~ 1.20.1** forge versions was successfully tested. [All test results](https://alphabs.gitbook.io/cmllib/installer.forge/supported-versions)
+## Supported NeoForge Versions
+
+NeoForge versions for Minecraft **1.20.2+** are supported.
 
 ## Install
 
-Install the [CmlLib.Core.Installer.Forge Nuget package](https://www.nuget.org/packages/CmlLib.Core.Installer.Forge)
+Install the [CmlLib.Core.Installer.NeoForge NuGet package](https://www.nuget.org/packages/CmlLib.Core.Installer.NeoForge)
 
-or download the nupkg in [Releases](https://github.com/CmlLib/CmlLib.Core.Installer.Forge/releases) and add references to them in your project.
+or download the nupkg file from [Releases](https://github.com/GamerVII-NET/CmlLib.Core.Installer.NeoForge/releases) and add references to them in your project.
 
-## [Documentation](https://alphabs.gitbook.io/cmllib/installer.forge/home)
-
-[Usages and Examples](https://alphabs.gitbook.io/cmllib/installer.forge/home)
-
-## Contributors
-
-<a href="https://github.com/CmlLib/CmlLib.Core.Installer.Forge/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=CmlLib/CmlLib.Core.Installer.Forge" />
-</a>
-
-Made with [contrib.rocks](https://contrib.rocks).
-
-Special thanks to [TaigoStudio](https://github.com/TaigoStudio) for contributing almost entire source codes.
+## Usage Example
