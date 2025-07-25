@@ -1,6 +1,7 @@
 ﻿using CmlLib.Core.Installer.Forge;
 using CmlLib.Core;
 using CmlLib.Core.Auth;
+using CmlLib.Core.Installer.Forge.Versions;
 using CmlLib.Core.Installers;
 using CmlLib.Core.ProcessBuilder;
 using SampleForgeInstaller;
@@ -24,10 +25,20 @@ var installerOutput = new SyncProgress<string>(e =>
 var mcVersion = "1.21";
 var forgeVersion = "21.0.24-beta";
 
-//Initialize MForge
-var forge = new NeoForgeInstaller(launcher);
+using var client = new HttpClient();
+var newVersions = new ForgeVersionLoader(client);
+var versions = await newVersions.GetNeoForgeVersions(mcVersion);
+var neoVersion = versions.FirstOrDefault(c => c.VersionName == forgeVersion);
 
-var version_name = await forge.Install(mcVersion, forgeVersion, new ForgeInstallOptions
+if (neoVersion is null)
+{
+    throw new Exception("NeoForge version not found");
+}
+
+//Initialize MForge
+var neoForge = new NeoForgeInstaller(launcher);
+
+var version_name = await neoForge.Install(mcVersion, forgeVersion, new ForgeInstallOptions
 {
     FileProgress = fileProgress,
     ByteProgress = byteProgress,
