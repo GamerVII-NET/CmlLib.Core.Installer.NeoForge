@@ -396,3 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+.idea
+/CmlLib.Core.Installer.NeoForge/FodyWeavers.xml
